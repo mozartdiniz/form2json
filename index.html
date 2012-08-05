@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html lang="en">
+
+	<head>
+	
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=620">
+		
+		<title>
+			Form 2 Json 
+		</title>
+		
+		<script type="text/javascript" charset="utf-8">
+				
+		    document.addEventListener('DOMContentLoaded',function(){
+		    
+                var button = document.getElementById("testButton");		    
+                
+                button.addEventListener("click", function(event) {
+                
+                    form2json({
+                        queryString: 'input[type=text]',
+                        delimiter: "."
+                    });	
+                    
+                }, false);		    		        		        
+		    
+		    });
+				
+		</script>
+		
+	</head>
+	<body>
+	
+	<form action="" method="get" accept-charset="utf-8">
+	    
+	    <label for="nome">Nome:</label>
+	    <input type="text" name="nome" value="123" id="nome" />
+	    <br /><br />
+	    
+	    <label for="nome">Empresa ID:</label>
+	    <input type="text" name="empresa.id" value="" id="empresa.id" />
+	    <br /><br />
+	    
+	    <label for="nome">Empresa Departamento ID:</label>
+	    <input type="text" name="empresa.departamento.id" value="" id="empresa.departamento.id" />
+	    <br /><br />
+	    
+        <label for="nome">Empresa Departamento ID:</label>
+        <input type="text" name="empresa.departamento.nome" value="" id="empresa.departamento.id" />
+        <br /><br />	    
+
+        <label for="nome">Empresa Departamento ID:</label>
+        <input type="text" name="empresa.departamento.grupo.id" value="" id="empresa.departamento.id" />
+        <br /><br />
+	
+	    <p><input type="button" value="Continue &rarr;" id="testButton"/></p>
+	</form>
+	
+	
+	<script type="text/javascript" charset="utf-8" src="form2json.js"></script>
+	
+	<script type="text/javascript" charset="utf-8">
+	        
+	</script>
+	
+	</body>
+	
+</html>
